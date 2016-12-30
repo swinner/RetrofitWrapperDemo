@@ -43,7 +43,7 @@ public class ServiceFactoty {
                 .build();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://api.dev.xxxx.com")
+                .baseUrl("http://api.dev.xxxxx.com")
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(CustomGsonConverterFactory.create())
 

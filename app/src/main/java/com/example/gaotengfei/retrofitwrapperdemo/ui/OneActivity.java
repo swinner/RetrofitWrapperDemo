@@ -14,6 +14,7 @@ import com.example.gaotengfei.retrofitwrapperdemo.bean.BaseJson;
 import com.example.gaotengfei.retrofitwrapperdemo.bean.BodyUserInfo;
 import com.example.gaotengfei.retrofitwrapperdemo.httpUtil.RetrofitControler;
 import com.example.gaotengfei.retrofitwrapperdemo.httpUtil.ServiceFactoty;
+import com.example.gaotengfei.retrofitwrapperdemo.httpUtil.exception.RetryWhenNetworkException;
 import com.example.gaotengfei.retrofitwrapperdemo.httpUtil.rxjava.ApplySchedulers;
 import com.example.gaotengfei.retrofitwrapperdemo.httpUtil.rxjava.BaseSubscriber;
 import com.example.gaotengfei.retrofitwrapperdemo.httpUtil.rxjava.BindActivityOperator;
@@ -53,7 +54,7 @@ public class OneActivity extends BaseActivity implements View.OnClickListener {
         switch (v.getId()){
             case R.id.btn_getcode:
                 Log.d("MyTest", "btn_getcode=======>");
-                Observable<String> observable0 = retrofitControler.getCaptcha("18530937599");
+                Observable<String> observable0 = retrofitControler.getCaptcha("18888888888");
 
                 observable0
                         .compose(new ApplySchedulers())
@@ -67,7 +68,7 @@ public class OneActivity extends BaseActivity implements View.OnClickListener {
                         );
                 break;
             case R.id.btn_click:
-                Observable<BaseJson<AccountInfo>> observable = retrofitControler.login(new BodyUserInfo("18530937599", et_code.getText().toString()));
+                Observable<BaseJson<AccountInfo>> observable = retrofitControler. login(new BodyUserInfo("18888888888", et_code.getText().toString()));
 
                 observable
                         .compose(new ApplySchedulers())

@@ -18,7 +18,7 @@ public class ApplySchedulers<T> implements Observable.Transformer<T, T> {
     @Override
     public Observable<T> call(Observable<T> observable) {
         return observable
-                .timeout(1, TimeUnit.SECONDS)// 任务超时设置为8秒
+                .timeout(10, TimeUnit.SECONDS)// 任务超时设置为10秒
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }
