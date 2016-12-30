@@ -46,6 +46,7 @@ public class ServiceFactoty {
                 .baseUrl("http://api.dev.bjshanbang.com")
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(CustomGsonConverterFactory.create())
+
                 //   .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();
